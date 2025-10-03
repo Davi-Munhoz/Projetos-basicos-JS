@@ -2,7 +2,9 @@ function comprar(){
     let quantidadeIngressos = parseInt(document.getElementById("qtd").value);
     let tipoIngresso = document.getElementById("tipo-ingresso").value;
 
-    if (tipoIngresso === "pista"){
+    if (quantidadeIngressos <= 0){
+        alert("Quantidade inválida, insira um valor maior que zero.");
+    } else if (tipoIngresso === "pista"){
         comprarPista(quantidadeIngressos);
     } else if (tipoIngresso === "inferior") {
         comprarCadeiraInferior(quantidadeIngressos);
