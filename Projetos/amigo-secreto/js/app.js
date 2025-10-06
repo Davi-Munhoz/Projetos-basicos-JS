@@ -28,6 +28,9 @@ function sortear() {
     if (amigos.length < 2) {
         alert("Adicione pelo menos dois amigos para sortear!");
         return;
+    } else if (amigos.length % 2 !== 0) {
+        alert("Número ímpar de amigos! Adicione mais um amigo para evitar que alguém tire a si mesmo.");
+        return;
     }
 
     embaralhar(amigos);
